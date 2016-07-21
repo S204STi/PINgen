@@ -10,6 +10,4 @@ function getPIN(min, max) {
  return PIN;
 }
 
-// getPIN(0,9);
-
 module.exports = getPIN;

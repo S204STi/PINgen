@@ -5,23 +5,29 @@ var express = require('express'),
 	getPIN = require('./PIN.js'),
 	port = process.env.PORT || 3000;
 
-app.use('/', express.static(__dirname + '/public'));
+
 app.set('views', 'src/server/views')
 	.set('view engine', 'ejs');
+
+app.use(function(req,res,next){
+	console.log('hit');
+	next();
+});
+
+app.use('/', express.static(__dirname + '/public'));
 
 app.get('/',function(req,res){
 	res.render('index');
 });
 
 app.get('/generate', function(req,res){
-	getPIN(0,9)
-	.then(function(){
-		res.redirect('/generate',{
-			getPIN:getPIN
-		});
+	//TODO app.getPIN is not a function err
+	var PIN = getPIN(0,9);
+	console.log(PIN);
+	res.render('generate', {
+		PIN:PIN
 	});
 });
-
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

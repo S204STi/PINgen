@@ -1,0 +1,29 @@
+html{
+	background-color: #E0E0E0;
+}
+.main{
+	align-content: center;
+	margin-top: 120px;
+}
+
+.btn{
+	height: 120px;
+	width: 290px;
+}
+
+form{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+li{
+	font-size: 120px;
+}
+
+h1{
+	margin-left: 10px;
+}
+
+.brand{
+	color: white;
+}
