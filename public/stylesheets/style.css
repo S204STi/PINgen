@@ -8,12 +8,13 @@ html{
 
 .btn{
 	height: 120px;
-	width: 290px;
+	width: 240px;
 }
 
 form{
 	margin-left: 0;
 	margin-right: 0;
+	left: -12px;
 }
 
 li{
@@ -26,4 +27,8 @@ h1{
 
 .brand{
 	color: white;
+}
+
+.list-group{
+	left:-26px;
 }

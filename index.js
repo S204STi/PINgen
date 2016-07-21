@@ -9,11 +9,6 @@ var express = require('express'),
 app.set('views', 'src/server/views')
 	.set('view engine', 'ejs');
 
-app.use(function(req,res,next){
-	console.log('hit');
-	next();
-});
-
 app.use('/', express.static(__dirname + '/public'));
 
 app.get('/',function(req,res){
@@ -23,7 +18,6 @@ app.get('/',function(req,res){
 app.get('/generate', function(req,res){
 	//TODO app.getPIN is not a function err
 	var PIN = getPIN(0,9);
-	console.log(PIN);
 	res.render('generate', {
 		PIN:PIN
 	});
