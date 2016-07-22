@@ -9,5 +9,3 @@ function copyToClipboard(e) {
 
 
 module.exports = copyToClipboard;
-
-//onclick="copyToClipboard(PINtext)";
