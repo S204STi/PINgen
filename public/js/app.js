@@ -1,7 +1,13 @@
 'use strict';
 
-var PINtext = document.getElementByID('PIN').innerHTML
+var PINtext = document.getElementById('PIN');
+	PINtext.addEventListener('click', copyToClipboard);
 
-function copyToClipboard(text) {
-	window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+function copyToClipboard(e) {
+	window.prompt("Copy to clipboard: Ctrl+C, Enter", e.target.innerHTML);
 }
+
+
+module.exports = copyToClipboard;
+
+//onclick="copyToClipboard(PINtext)";
